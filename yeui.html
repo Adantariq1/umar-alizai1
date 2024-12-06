@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A special birthday wish for my bestie Mehreen Baji from Umar Alizai.">
+    <title>🎉💖 Happy Birthday Mehreen Baji! 💖🎉</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-top: 20px; /* Reduced margin */
+            color: #ff6f91; /* Stable pink color */
+            text-shadow: 0 0 10px #fff, 0 0 20px #ff6f91;
+            display: none;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 20px;
+            line-height: 1.8;
+            max-width: 800px; /* Increased width */
+            margin-left: auto;
+            margin-right: auto;
+            display: none;
+            color: #ff6f91; /* Stable pink color */
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .countdown {
+            font-size: 6rem;
+            margin-top: 10%; /* Reduced space */
+            color: #ff6f91; /* Stable pink color */
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 30px 0;
+            display: none;
+            width: 100%;
+            gap: 20px;
+        }
+
+        video {
+            width: 45%; /* Adjusted size */
+            max-width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .emoji-container {
+            position: relative;
+            margin-top: 20px;
+            font-size: 2.5rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .emoji-container span {
+            animation: bounce 2s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-15px); }
+        }
+
+        /* Floating Hearts Animation */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-hearts div {
+            position: absolute;
+            bottom: -50px;
+            width: 20px;
+            height: 20px;
+            background: #ff6f91;
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .floating-hearts div:nth-child(odd) {
+            background: #fad0c4;
+        }
+
+        .floating-hearts div:nth-child(1) { left: 10%; animation-duration: 7s; }
+        .floating-hearts div:nth-child(2) { left: 30%; animation-duration: 5s; }
+        .floating-hearts div:nth-child(3) { left: 50%; animation-duration: 6s; }
+        .floating-hearts div:nth-child(4) { left: 70%; animation-duration: 4s; }
+        .floating-hearts div:nth-child(5) { left: 90%; animation-duration: 8s; }
+
+        @keyframes float {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+        }
+
+        /* Party popper confetti animation */
+        .confetti {
+            position: fixed;
+            top: -10px;
+            left: 50%;
+            width: 15px;
+            height: 15px;
+            background-color: #ff6f91;
+            border-radius: 50%;
+            animation: popper 3s ease-in-out infinite;
+        }
+
+        @keyframes popper {
+            0% {
+                transform: translateX(0) translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(calc(-50vw + 200px)) translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Background music -->
+    <audio autoplay loop>
+        <source src="path_to_background_music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Floating Hearts -->
+    <div class="floating-hearts">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Countdown -->
+    <div class="countdown" id="countdown">3</div>
+
+    <!-- Birthday Heading -->
+    <h1>🎉💖 Happy Birthday, Mehreen Baji! 💖🎉</h1>
+
+    <!-- Animated Emojis -->
+    <div class="emoji-container">
+        <span>💖</span>
+        <span>💫</span>
+        <span>🎉</span>
+        <span>🥳</span>
+        <span>🎂</span>
+        <span>🎈</span>
+        <span>🌟</span>
+        <span>💝</span>
+    </div>
+
+    <!-- Video Container -->
+    <div class="video-container" id="videoContainer">
+        <video id="birthdayVideo1" controls>
+            <source src="VID-20241003-WA0038.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video id="birthdayVideo2" controls>
+            <source src="WhatsApp Video 2024-12-05 at 15.21.51_010056b3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Birthday Message -->
+    <p>
+        Mehreen Baji, on your special day, I want to take a moment to let you know just how much you mean to me. 
+        From the very beginning of our friendship, you've been a constant source of support, kindness, and joy. 
+        Your infectious laughter, your caring heart, and your ability to turn any moment into a cherished memory are things I truly treasure.
+    </p>
+    <p>
+        Wishing you a day filled with love, joy, and all the things that make you smile. 
+        Here's to many more adventures together! 
+        Happy Birthday once again! 
+        With all my love, <br> Umar Alizai 💖🎂
+    </p>
+
+    <script>
+        let countdownElement = document.getElementById('countdown');
+        let count = 3;
+
+        const countdownInterval = setInterval(() => {
+            countdownElement.textContent = count;
+            count--;
+            if (count < 0) {
+                clearInterval(countdownInterval);
+                countdownElement.style.display = 'none'; // Hide countdown
+                document.querySelector('h1').style.display = 'block'; // Show heading
+                document.getElementById('videoContainer').style.display = 'flex'; // Show videos
+                document.querySelectorAll('p').forEach(p => p.style.display = 'block'); // Show paragraphs
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
